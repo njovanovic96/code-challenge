@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:coding-challenge;DB_CLOSE_DELAY=-1;INIT=CREATE SCHEMA IF NOT EXISTS coding_challenge;
+    username: sa
+    password: pass
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        default_schema: coding_challenge
+    show-sql: true
+  h2:
+    console.enabled: true
